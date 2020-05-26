@@ -7,7 +7,7 @@ hamburger.addEventListener('click', () => {
 });
 
 document.addEventListener('click', e => {
-  if (event.target.closest('.left-menu')) {
+  if (!e.target.closest('.left-menu')) {
 
     leftMenu.classList.remove('openMenu');
     hamburger.classList.remove('open');
@@ -23,5 +23,4 @@ leftMenu.addEventListener('click', e => {
     leftMenu.classList.add('openMenu');
     hamburger.classList.add('open');
   }
-
 });
